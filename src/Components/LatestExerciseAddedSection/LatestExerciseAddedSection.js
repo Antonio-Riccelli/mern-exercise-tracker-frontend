@@ -5,11 +5,12 @@ const {description, duration, date, _id, username} = latestExerciseAdded;
 
     return (
         <section className={styles.LatestExerciseAddedSection}>
-        <p>{_id}</p>
-        <p>{username}</p>
-        <p>{description}</p>
-        <p>{duration}</p>
-        <p>{date}</p>
+        <h3>Latest Exercise Added:</h3>
+        <p>ID: {_id}</p>
+        <p>Username: {username}</p>
+        <p>Exercise: {description}</p>
+        <p>Duration: {duration}</p>
+        <p>Date: {date}</p>
         </section>
     )
 }
