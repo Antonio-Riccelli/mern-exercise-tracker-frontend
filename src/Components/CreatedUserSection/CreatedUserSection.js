@@ -9,7 +9,7 @@ export default function CreatedUserSection({createdUser}) {
         {[createdUser.data].map(obj => {
             return (
                 <div key={obj._id}>
-                <p>This is the user you just created:</p>
+                <h3>This is the user you just created:</h3>
                 <p>Username: <span>{obj.username}</span></p>
                 <p>Id: <span>{obj._id}</span></p>
                 </div>
@@ -17,7 +17,7 @@ export default function CreatedUserSection({createdUser}) {
         })}
         </section>
     )
-} else {
+}  else {
     return (
         <></>
     )

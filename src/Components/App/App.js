@@ -2,8 +2,9 @@ import {useState} from "react";
 import styles from './App.module.css';
 import CreateUserForm from '../CreateUserForm/CreateUserForm.js';
 import CreatedUserSection from "../CreatedUserSection/CreatedUserSection.js";
-import AddExerciseSection from "../AddExerciseSection/AddExerciseSection";
-import LatestExerciseAddedSection from "../LatestExerciseAddedSection/LatestExerciseAddedSection";
+import AddExerciseSection from "../AddExerciseSection/AddExerciseSection.js";
+import LatestExerciseAddedSection from "../LatestExerciseAddedSection/LatestExerciseAddedSection.js";
+import ExerciseLog from "../ExerciseLog/ExerciseLog.js";
 
 function App() {
 const URL = `https://fcc-exercise-trackr.herokuapp.com/api/users`;
@@ -11,7 +12,7 @@ const [createdUser, setCreatedUser] = useState({});
 const [latestExerciseAdded, setLatestExerciseAdded] = useState({});
 
   return (
-    <div className="App">
+    <section className="App">
      <h1>Exercise Tracker</h1>
      <section className={styles.forms}>
     <CreateUserForm url={URL} setCreatedUser={setCreatedUser} createdUser={createdUser} />
@@ -22,7 +23,11 @@ const [latestExerciseAdded, setLatestExerciseAdded] = useState({});
       <CreatedUserSection createdUser={createdUser} />
       <LatestExerciseAddedSection latestExerciseAdded={latestExerciseAdded} />
     </section>
-    </div>
+
+    <section className={styles.returnedResults}>
+    <ExerciseLog url={URL} />
+    </section>
+    </section>
   );
 }
 
