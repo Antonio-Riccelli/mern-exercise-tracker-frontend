@@ -12,8 +12,11 @@ const [createdUser, setCreatedUser] = useState({});
 const [latestExerciseAdded, setLatestExerciseAdded] = useState({});
 
   return (
-    <section className="App">
-     <h1>Exercise Tracker</h1>
+    <section className={styles.App}>
+    <header className={styles.header}>
+     <h1 className={styles.appTitle}>Exercise Tracker</h1>
+     </header>
+     <div class={styles.contentWrapper}>
      <section className={styles.forms}>
     <CreateUserForm url={URL} setCreatedUser={setCreatedUser} createdUser={createdUser} />
     <AddExerciseSection setLatestExerciseAdded={setLatestExerciseAdded}/>
@@ -27,6 +30,7 @@ const [latestExerciseAdded, setLatestExerciseAdded] = useState({});
     <section className={styles.returnedResults}>
     <ExerciseLog url={URL} />
     </section>
+    </div>
     </section>
   );
 }
