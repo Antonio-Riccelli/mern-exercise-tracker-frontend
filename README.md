@@ -13,6 +13,7 @@ This repo only contains the frontend.
 
 ## Technologies
 
+- React
 - Node.JS
 - Express
 - MongoDB
