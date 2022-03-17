@@ -1,7 +1,7 @@
 .AddExerciseSection {
     background-color: antiquewhite;
     width: 75%;
-    padding: 30px;
+    padding: 30px 30px 20px 30px;
     margin: 10px;
     border-radius: 15px;
     box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.864);
@@ -21,7 +21,6 @@
     border-radius: 10px;
     width: 120px;
     width: 45%;
-    font-size: 1.2rem;
     box-shadow: 2px 2px 5px 1px black;
     cursor: pointer;
 }
@@ -43,11 +42,13 @@
     align-items: left;
     width: 100%;
     text-align: left;
+    margin-bottom: 10px;
 }
 
 .fieldsInput {
     padding: 10px;
     margin: 5px;
     border-radius: 10px;
-    font-size: 1.2rem;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.864);
 }
+

@@ -5,6 +5,7 @@
     margin: 10px;
     border-radius: 15px;
     box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.864);
+    text-align: center;
 }
 
 .CreateUserForm:hover {
@@ -17,7 +18,6 @@
     border-radius: 10px;
     width: 120px;
     width: 45%;
-    font-size: 1.2rem;
     box-shadow: 2px 2px 5px 1px black;
     cursor: pointer;
 }
@@ -38,7 +38,6 @@
     margin: 5px;
     border-radius: 10px;
     width: 45%;
-    font-size: 1.2rem;
 }
 
 .createUserTitle {

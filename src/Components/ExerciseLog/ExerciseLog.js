@@ -1,5 +1,6 @@
 import {useState} from "react";
 import axios from "axios";
+import styles from "./ExerciseLog.module.css"
 
 export default function ExerciseLog({url}) {
     const [exerciseLog, setExerciseLog] = useState([]);
@@ -25,29 +26,34 @@ export default function ExerciseLog({url}) {
     }
 
     return (
-        <section>
-            <form encType="multipart/form" onSubmit={handleSubmit}>
-            <input type="text" name="id" placeholder="Enter username id" />
-            <input type="text" name="from" placeholder="Insert FROM date [optional]" />
-            <input type="text" name="to" placeholder="Insert TO date [optional]" />
-            <input type="number" name="limit" placeholder="Insert Limit" min="0" />
-            <input type="submit" name="submit" value="Retrieve Log" />
+        <section className={styles.exerciseModuleSection}>
+        <h4>Log</h4>
+            <form className={styles.formWrapper} encType="multipart/form" onSubmit={handleSubmit}>
+            <div className={styles.Inputs}>
+            <label htmlFor="id">User ID</label>
+            <input type="text" name="id" id="id" placeholder="Enter User ID" className={styles.fieldsInput} />
+            <label htmlFor="from">FROM</label>
+            <input type="text" name="from" id="from" placeholder="Insert FROM date [YYYY-MM-DD] [optional]" className={styles.fieldsInput} />
+            <label htmlFor="to">TO</label>
+            <input type="text" name="to" id="to" placeholder="Insert TO date [YYYY-MM-DD] [optional]" className={styles.fieldsInput} />
+            <label htmlFor="limit">Limit</label>
+            <input type="number" name="limit" id="limit" placeholder="Insert Limit [optional]" min="0" className={styles.fieldsInput} />
+            </div>
+            <input type="submit" name="submit" className={styles.submitButton} value="Retrieve Log" />
             </form>
             {
                 exerciseLog.length ? exerciseLog.map(obj => {
                     return (
-                        <section key={obj._id}>
-                            <h4>Log retrieved</h4>
-                            <p>Username and ID: {obj.username}, {obj._id}</p>
-                            <p>How many exercises has this user logged? {obj.count}</p>
-                            <section id="log">
+                        <section key={obj._id} className={styles.entriesSection}>
+                            <p className={styles.entryHeader}>Entries: {obj.count}</p>
+                            <section id="log" className={styles.entriesWrapper}>
                                {obj.log.length ? obj.log.map((entry, ind) => {
                                    return (
-                                      <section id="entry" key={entry._id}>
-                                      <h4>Entry {ind + 1}</h4>
-                                          <p>Exercise: {entry.description}</p>
-                                          <p>Duration: {entry.duration}</p>
-                                          <p>Date: {entry.date}</p>
+                                      <section id="entry" key={entry._id} className={styles.entryWrapper}>
+                                      <h4 className={styles.entryTitle}>Entry {ind + 1}</h4>
+                                          <p className={styles.userDataLabel}>Exercise: <span className={styles.userData}>{entry.description}</span></p>
+                                          <p className={styles.userDataLabel}>Duration:  <span className={styles.userData}>{entry.duration}</span></p>
+                                          <p className={styles.userDataLabel}>Date:  <span className={styles.userData}>{entry.date}</span></p>
 
                                       </section> 
                                    )

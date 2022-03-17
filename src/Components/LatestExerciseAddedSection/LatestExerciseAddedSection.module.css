@@ -11,6 +11,10 @@
     align-items: center;
 }
 
+.LatestExerciseAddedSection:hover {
+    box-shadow: 5px 5px 2px 2px rgba(0, 0, 0, 0.864);
+}
+
 .userDataLabel {
     font-weight: bold;
     background-color: #FFF;
