@@ -9,7 +9,7 @@ User can also filter by date and limit the number of results.
 
 Purpose of this project was for me to learn how to use MongoDB and Mongoose, and develop a MERN stack app.
 
-This repo only contains the frontend.
+This repo only contains the frontend. The backend is stored on [https://github.com/Antonio-Riccelli/fcc-exercise-tracker](https://github.com/Antonio-Riccelli/fcc-exercise-tracker) and hosted on [https://fcc-exercise-trackr.herokuapp.com/](https://fcc-exercise-trackr.herokuapp.com/).
 
 ## Technologies
 
